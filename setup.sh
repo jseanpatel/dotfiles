@@ -1,10 +1,6 @@
 echo "Creating an SSH key for you..."
 ssh-keygen -t rsa
 
-# echo "Please add this public key to Github \n"
-# echo "https://github.com/account/ssh \n"
-# read -p "Press [Enter] key after this..."
-
 echo "Installing xcode-stuff"
 xcode-select --install
 
@@ -23,7 +19,6 @@ echo "Installing Git..."
 brew install git
 
 echo "Git config"
-
 git config --global user.name "Jacob Patel"
 git config --global user.email jseanpatel@gmail.com
 
@@ -41,6 +36,7 @@ brew install netlify-cli
 brew install twilio-cli
 brew install postcss-cli
 brew install dotenv-cli
+brew install google-cloud-sdk
 brew install mas
 
 echo "Installing Mac apps"
@@ -71,7 +67,9 @@ chsh -s /bin/zsh
 apps=(
   anki
   appcleaner
+  bitwarden
   docker
+  enpass
   figma
   firefox
   firefox-developer-edition
@@ -83,7 +81,7 @@ apps=(
   notion
   slack
   spotify
-  sublime-text2
+  sublime-text
   visual-studio-code
   zoom
 )
