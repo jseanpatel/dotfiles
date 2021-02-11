@@ -1,15 +1,17 @@
 echo "Creating an SSH key for you..."
 ssh-keygen -t rsa
 
+echo "Configuring git"
+git config --global user.name "Jacob Patel"
+git config --global user.email jseanpatel@gmail.com
+
 echo "Installing xcode-stuff"
 xcode-select --install
 
 # Check for Homebrew,
 # Install if we don't have it
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+echo "Installing homebrew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Update homebrew recipes
 echo "Updating homebrew..."
@@ -18,35 +20,36 @@ brew update
 echo "Installing Git..."
 brew install git
 
-echo "Git config"
-git config --global user.name "Jacob Patel"
-git config --global user.email jseanpatel@gmail.com
 
 echo "Installing other brew stuff..."
 brew install tree
 brew install wget
-brew install node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+nvm install --lts
 
-echo "Installing Java"
-brew cask install java
+source ~/.bash_profile
 
 echo "Installing CLI's"
+npm i -g twilio-cli
+npm i -g postcss-cli
+npm i -g dotenv-cli
 brew install gatsby-cli
 brew install netlify-cli
-brew install twilio-cli
-brew install postcss-cli
-brew install dotenv-cli
 brew install google-cloud-sdk
 brew install mas
+
+echo "Installing Eslint with Airbnb Style"
+npm i eslint --save-dev
+npm i eslint-config-airbnb --save-dev
+npm i eslint-config-airbnb-base
+npm i object.assign
+npm i object.entries
 
 echo "Installing Mac apps"
 mas "Wipr", id: 1320666476
 
 echo "Cleaning up brew"
 brew cleanup
-
-echo "Installing homebrew cask"
-brew install caskroom/cask/brew-cask
 
 #Install Zsh & Oh My Zsh
 echo "Installing Oh My ZSH..."
@@ -55,10 +58,6 @@ curl -L http://install.ohmyz.sh | sh
 # echo "Setting up Oh My Zsh theme..."
 # cd  /Users/bradparbs/.oh-my-zsh/themes
 # curl https://gist.githubusercontent.com/bradp/a52fffd9cad1cd51edb7/raw/cb46de8e4c77beb7fad38c81dbddf531d9875c78/brad-muse.zsh-theme > brad-muse.zsh-theme
-
-echo "Setting up Zsh plugins..."
-cd ~/.oh-my-zsh/custom/plugins
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
@@ -72,7 +71,6 @@ apps=(
   enpass
   figma
   firefox
-  firefox-developer-edition
   gitkraken
   google-chrome
   intellij-idea
@@ -89,8 +87,7 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "installing apps with Cask..."
-brew cask install --appdir="/Applications" ${apps[@]}
-brew cask alfred link
+brew install --cask --appdir="/Applications" ${apps[@]}
 brew cleanup
 
 echo "Setting some Mac settings..."
@@ -154,18 +151,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-
-#"Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
-defaults write com.apple.dock tilesize -int 36
-
-#"Speeding up Mission Control animations and grouping windows by application"
-defaults write com.apple.dock expose-animation-duration -float 0.1
-defaults write com.apple.dock "expose-group-by-app" -bool true
-
-#"Setting Dock to auto-hide and removing the auto-hiding delay"
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock autohide-delay -float 0
-defaults write com.apple.dock autohide-time-modifier -float 0
 
 #"Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
