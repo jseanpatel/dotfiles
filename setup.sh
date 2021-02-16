@@ -155,6 +155,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 #"Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
+# Setting dock size
+defaults write com.apple.dock tilesize -int 64; killall Dock
+
 #"Enabling UTF-8 ONLY in Terminal.app and setting the Pro theme by default"
 defaults write com.apple.terminal StringEncodings -array 4
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
