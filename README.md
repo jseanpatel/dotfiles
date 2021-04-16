@@ -1,5 +1,7 @@
 # dotfiles
 
+*Setup script for Mac after format*
+
 ## Table of Contents
 - [Description](#description)
 - [License](#license)
