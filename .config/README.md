@@ -4,11 +4,19 @@
 
 ## Table of Contents
 - [Description](#description)
+- [Instructions](#instructions)
 - [License](#license)
 
 ## Description
 
 The setup script for my Mac after a format.
+
+## Instructions
+
+The following are a checklist of tasks to be completed after every format:
+
+1. Import `material-design-colors.itermcolor` into iTerm2
+2. Generate GitHub personal access tokens
 
 ## License
 
