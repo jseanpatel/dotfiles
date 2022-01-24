@@ -31,16 +31,20 @@ echo "Installing other brew stuff..."
 brew install tree
 brew install wget
 brew install nvm
+brew install --cask keka
 
 echo "Installing CLI's"
 npm i -g twilio-cli
 npm i -g postcss-cli
 npm i -g dotenv-cli
+npm install --global yarn
+npm i -g eslint
 brew install gatsby-cli
 brew install netlify-cli
 brew install google-cloud-sdk
 brew install mas
 brew install next
+
 
 echo "Installing Eslint with Airbnb Style"
 npm i eslint --save-dev
@@ -136,9 +140,6 @@ defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
 
 # Adjust cursor speed
 defaults write NSGlobalDomain KeyRepeat -int 1
-
-# Automatically quit printer app once the print jobs complete
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
