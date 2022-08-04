@@ -38,6 +38,8 @@ The following are a checklist of tasks to be completed after every format:
 1. Log in to every application downloaded with `brew cask`
 2. Generate GitHub personal access token for commiting/pushing (update [yadm](https://yadm.io) if relevant)
 3. Make Documents and Desktop folder read from iCloud with *System Preferences > Apple ID > iCloud > Check Desktop & Documents Folders > Done*
+4. Sync iMessage between devices with *Messages > System Preferences > iMessage > Enable Message in iCloud*
+5. Remove all apps from dock except [VSCode](https://code.visualstudio.com/), iMessage and [iTerm2](https://iterm2.com/), then adjust dock size.
 
 ## License
 
