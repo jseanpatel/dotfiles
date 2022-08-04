@@ -37,7 +37,7 @@ echo "Installing CLI's"
 npm i -g twilio-cli
 npm i -g postcss-cli
 npm i -g dotenv-cli
-npm install --global yarn
+npm i -g yarn
 npm i -g eslint
 brew install gatsby-cli
 brew install netlify-cli
@@ -47,11 +47,11 @@ brew install next
 
 
 echo "Installing Eslint with Airbnb Style"
-npm i eslint --save-dev
-npm i eslint-config-airbnb --save-dev
-npm i eslint-config-airbnb-base
-npm i object.assign
-npm i object.entries
+npm i -g eslint --save-dev
+npm i -g eslint-config-airbnb --save-dev
+npm i -g eslint-config-airbnb-base
+npm i -g object.assign
+npm i -g object.entries
 
 echo "Installing Mac apps"
 mas "Wipr", id: 1320666476
@@ -66,13 +66,18 @@ curl -L http://install.ohmyz.sh | sh
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
 
+echo "Cleanup so Docker can be installed..."
+brew remove docker
+
+echo "Installing Rosetta in case of Apple chip..."
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+
 # Apps
 apps=(
   anki
   appcleaner
   bitwarden
   docker
-  enpass
   figma
   firefox
   google-chrome
@@ -82,49 +87,21 @@ apps=(
   notion
   slack
   spotify
+  steam
   sublime-merge
   sublime-text
   tableplus
-  vscodium
+  visual-studio-code
   zoom
 )
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
-echo "installing apps with Cask..."
+echo "Installing apps with Cask..."
 brew install --appdir="/Applications" ${apps[@]}
 brew cleanup
 
 killall Finder
-
-# Clone all public repos from personal account
-cd ~/Documents/
-
-CNTX={users}; NAME={jseanpatel}; PAGE=1
-curl "https://api.github.com/$CNTX/$NAME/repos?page=$PAGE&per_page=100" |
-  grep -e 'git_url*' |
-  cut -d \" -f 4 |
-  xargs -L1 git clone
-
-# Clone all public repos from treetoplearning
-CNTX={orgs}; NAME={treetoplearning}; PAGE=1
-curl "https://api.github.com/$CNTX/$NAME/repos?page=$PAGE&per_page=100" |
-  grep -e 'git_url*' |
-  cut -d \" -f 4 |
-  xargs -L1 git clone
-
-# Clone all public repos from ladderdesigns
-CNTX={orgs}; NAME={ladderdesigns}; PAGE=1
-curl "https://api.github.com/$CNTX/$NAME/repos?page=$PAGE&per_page=100" |
-  grep -e 'git_url*' |
-  cut -d \" -f 4 |
-  xargs -L1 git clone
-
-# Clone the iTerm2 Material Design palette
-git clone https://github.com/MartinSeeler/iterm2-material-design
-
-# Clone the powerlevel10k repo
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/Documents/powerlevel10k
 
 # Adjust Mac system settings
 # --------------------------
@@ -133,7 +110,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/Documents/pow
 # --------------------------
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram StartupMute=%01
 
 # Disable system sound effects
 defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0

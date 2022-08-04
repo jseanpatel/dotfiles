@@ -1,28 +1,50 @@
+
 # dotfiles
 
 *Setup script for Mac after format*
 
 ## Table of Contents
 - [Description](#description)
-- [Instructions](#instructions)
+- [Setup Instructions](#setup-instructions)
 - [License](#license)
 
 ## Description
 
 The setup script for my Mac after a format.
 
-## Instructions
+## Setup Instructions
 
 The following are a checklist of tasks to be completed after every format:
 
-1. Import `material-design-colors.itermcolor` into iTerm2
+things I am going to fix:
+- add setup for selecting documents and desktop in iCloud so that local folders aren't used (rip fire)
+
+### General Bootstrap
+
+1. Install `home-brew` with 
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)`
+2. Install `yadm` with `brew install yadm`
+3. Clone the dot files repository `yadm clone https://github.com/jseanpatel/dotfiles`
+4. Navigate to the repository and run `sudo sh bootstrap.sh`
+
+### iTerm2 Configuration
+
+1. *iTerm2 > Preferences > Profiles > Colors Tab*
+2. Click *Color Presets...*
+3. Click *Import...*
+4. Select the `material-design-colors.itermcolors` file
+5. Select the *material-design-colors* from *Load Presets...*
+
+### Additional Tasks
+
+1. Log in to every application downloaded with `brew cask`
 2. Generate GitHub personal access tokens
 
 ## License
 
 MIT License
 
-Copyright (c) 2021 Jacob Patel
+Copyright (c) 2022 Jacob Patel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
