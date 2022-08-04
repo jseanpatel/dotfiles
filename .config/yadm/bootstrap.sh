@@ -103,6 +103,10 @@ brew cleanup
 
 killall Finder
 
+echo "Installing powerlevel10k"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
 # Adjust Mac system settings
 # --------------------------
 
@@ -130,7 +134,14 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-# 2. Screen
+# 2. Cleanup Dock
+# --------------------------
+
+# Make time for auto-hide/show of Dock 0.15 seconds
+defaults write com.apple.dock autohide-time-modifier -float 0.10;killall Dock
+
+
+# 3. Screenshots
 # --------------------------
 
 # Save screenshots to the desktop
@@ -138,6 +149,8 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
+
+
 
 echo "----------------------------"
 echo "Done with setup! Ready to go."

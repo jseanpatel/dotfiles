@@ -16,29 +16,28 @@ The setup script for my Mac after a format.
 
 The following are a checklist of tasks to be completed after every format:
 
-things I am going to fix:
-- add setup for selecting documents and desktop in iCloud so that local folders aren't used (rip fire)
-
 ### General Bootstrap
 
-1. Install `home-brew` with 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)`
-2. Install `yadm` with `brew install yadm`
+1. Install [homebrew](https://brew.sh) with 
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
+```
+2. Install [yadm](https://yadm.io) with `brew install yadm`
 3. Clone the dot files repository `yadm clone https://github.com/jseanpatel/dotfiles`
 4. Navigate to the repository and run `sudo sh bootstrap.sh`
 
 ### iTerm2 Configuration
 
-1. *iTerm2 > Preferences > Profiles > Colors Tab*
-2. Click *Color Presets...*
-3. Click *Import...*
-4. Select the `material-design-colors.itermcolors` file
-5. Select the *material-design-colors* from *Load Presets...*
+1. Add [material design theme](https://github.com/MartinSeeler/iterm2-material-design) with *iTerm2 > Preferences > Profiles > Colors Tab > Color Presets > Import*
+2. Select the file `material-design-colors.itermcolors` 
+3. Select the *material-design-colors* from *Load Presets...*
+4. Complete configuration wizard for [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ### Additional Tasks
 
 1. Log in to every application downloaded with `brew cask`
-2. Generate GitHub personal access tokens
+2. Generate GitHub personal access token for commiting/pushing (update [yadm](https://yadm.io) if relevant)
+3. Make Documents and Desktop folder read from iCloud with *System Preferences > Apple ID > iCloud > Check Desktop & Documents Folders > Done*
 
 ## License
 
