@@ -18,10 +18,7 @@ The following are a checklist of tasks to be completed after every format:
 
 ### General Bootstrap
 
-1. Install [homebrew](https://brew.sh) with 
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
-```
+1. Install [homebrew](https://brew.sh) with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)`
 2. Install [yadm](https://yadm.io) with `brew install yadm`
 3. Clone the dot files repository `yadm clone https://github.com/jseanpatel/dotfiles`
 4. Navigate to the repository and run `sudo sh bootstrap.sh`
