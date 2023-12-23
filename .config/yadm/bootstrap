@@ -74,17 +74,30 @@ echo "Installing Rosetta in case of Apple chip..."
 
 # Apps
 apps=(
+  android-studio
   anki
   appcleaner
+  arc
   bitwarden
+  dash
+  discord
   docker
+  fig
   figma
   firefox
   google-chrome
   intellij-idea
+  insomnia
   iterm2
+  lulu
   nordvpn
   notion
+  obsidian
+  orbstack
+  raycast
+  pixelsnap
+  polypane
+  screen-studio
   slack
   spotify
   steam
@@ -133,6 +146,9 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+# Show battery percentage
+defaults -currentHost write com.apple.controlcenter.plist BatteryShowPercentage -bool true
 
 # 2. Cleanup Dock
 # --------------------------
