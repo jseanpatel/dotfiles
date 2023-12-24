@@ -17,10 +17,17 @@ The following are a checklist of tasks to be completed after every format:
 
 ### General Bootstrap
 
-1. Install [homebrew](https://brew.sh) with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)`
-2. Install [yadm](https://yadm.io) with `brew install yadm`
-3. Clone the dot files repository `yadm clone https://github.com/jseanpatel/dotfiles`
-4. Navigate to the repository and run `sudo sh bootstrap.sh`
+1. Install [homebrew](https://brew.sh) with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+    - Run these two commands in your terminal to add Homebrew to your PATH:
+    ```
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jseanpatel/.zprofile
+
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    ```
+2. Navigate to the home directory with `cd ~`
+3. Install [yadm](https://yadm.io) with `brew install yadm`
+4. Clone the dot files repository `yadm clone https://github.com/jseanpatel/dotfiles`
+5. Navigate to the repository and run `sh bootstrap.sh`
 
 
 ### Terminal Configuration
@@ -37,19 +44,36 @@ Pick one of the following configurations
 
 #### Warp
 
+### IDE Configuration
+
+#### VSCode
+
+1. Login to GitHub on VSCode, and sync extensions
+
+### Launcher Configuration
+
+#### Raycast
+
+1. Set Raycast as [default launcher](https://www.s-ndr.be/wiki/replace-spotlight-with-raycast/)
+
 ### Additional Tasks
 
-1. Log into iCloud. Make Documents and Desktop folder read from iCloud with *System Preferences > Apple ID > iCloud > Check Desktop & Documents Folders > Done*
-2. Log in to every application downloaded with `brew cask`
+1. Additional iCloud setup
+
+    - Make Documents and Desktop folder read from iCloud with *System Settings > Apple ID > iCloud > Check Desktop & Documents Folders > Done*
+    - Go to iMessages and enable messages in iCloud
+
+2. Log in to every application downloaded with `brew cask`. Then go and install these applicaitons manually:
 
     - Install [Xnapper](https://xnapper.com/)
     - Install [Padlet](https://padlet.com/mac-app-download)
 
 3. Generate GitHub personal access token for commiting/pushing (update [yadm](https://yadm.io) if relevant)
-4. Sync iMessage between devices with *Messages > System Preferences > iMessage > Enable Message in iCloud*
-5. Remove all apps from dock except [VSCode](https://code.visualstudio.com/), iMessage and [iTerm2](https://iterm2.com/), then adjust dock size
-6. Open and configure Lulu
-7. Follow security steps listed [here](https://www.bejarano.io/hardening-macos/)
+4. Remove all apps from dock except [VSCode](https://code.visualstudio.com/), iMessage and [iTerm2](https://iterm2.com/), then adjust dock size
+5. Open and configure Lulu
+6. Set Pixelsnap hotkey to `⌘ + Shift + X`  
+7. Open Obsidian, and disable from backing up to iCloud Drive (for local folder, place in a non-synced directory)
+8. Follow security steps listed [here](https://www.bejarano.io/hardening-macos/)
 
 ## License
 
