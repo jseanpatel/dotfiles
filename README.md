@@ -21,6 +21,7 @@ The following are a checklist of tasks to be completed after every format:
 
     - Run these two commands in your terminal to add Homebrew to your PATH:
     <br/>
+    
     ```bash
     (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jseanpatel/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
