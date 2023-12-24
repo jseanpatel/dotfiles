@@ -19,11 +19,12 @@ The following are a checklist of tasks to be completed after every format:
 
 1. Install [homebrew](https://brew.sh) with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
     - Run these two commands in your terminal to add Homebrew to your PATH:
-    ```
-    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jseanpatel/.zprofile
 
+    ```bash
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jseanpatel/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
     ```
+
 2. Navigate to the home directory with `cd ~`
 3. Install [yadm](https://yadm.io) with `brew install yadm`
 4. Clone the dot files repository `yadm clone https://github.com/jseanpatel/dotfiles`
@@ -58,22 +59,23 @@ Pick one of the following configurations
 
 ### Additional Tasks
 
-1. Additional iCloud setup
+1. Open and configure Lulu
+2. Follow security steps listed [here](https://www.bejarano.io/hardening-macos/)
+3. Additional iCloud setup
 
     - Make Documents and Desktop folder read from iCloud with *System Settings > Apple ID > iCloud > Check Desktop & Documents Folders > Done*
     - Go to iMessages and enable messages in iCloud
 
-2. Log in to every application downloaded with `brew cask`. Then go and install these applicaitons manually:
+4. Log in to every application downloaded with `brew cask`. Then go and install these applicaitons manually:
 
     - Install [Xnapper](https://xnapper.com/)
     - Install [Padlet](https://padlet.com/mac-app-download)
 
-3. Generate GitHub personal access token for commiting/pushing (update [yadm](https://yadm.io) if relevant)
-4. Remove all apps from dock except [VSCode](https://code.visualstudio.com/), iMessage and [iTerm2](https://iterm2.com/), then adjust dock size
-5. Open and configure Lulu
-6. Set Pixelsnap hotkey to `⌘ + Shift + X`  
-7. Open Obsidian, and disable from backing up to iCloud Drive (for local folder, place in a non-synced directory)
-8. Follow security steps listed [here](https://www.bejarano.io/hardening-macos/)
+5. Generate GitHub personal access token for commiting/pushing (update [yadm](https://yadm.io) if relevant)
+6. Remove all apps from dock except [VSCode](https://code.visualstudio.com/), iMessage and [Warp](https://www.warp.dev/), then adjust dock size
+7. Set Pixelsnap hotkey to `⌘ + Shift + X`  
+8. Open Obsidian, and disable from backing up to iCloud Drive (for local folder, place in a non-synced directory)
+9. Load up a game of [Seterra](https://www.geoguessr.com/vgp/3007) and enjoy your new computer
 
 ## License
 

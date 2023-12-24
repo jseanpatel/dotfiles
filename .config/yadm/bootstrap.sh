@@ -47,15 +47,12 @@ brew install google-cloud-sdk
 brew install withgraphite/tap/graphite
 brew install mas
 
-
 echo "Installing Eslint with Airbnb Style"
 npm i -g eslint --save-dev
 npm i -g eslint-config-airbnb --save-dev
 npm i -g eslint-config-airbnb-base
 npm i -g object.assign
 npm i -g object.entries
-
-echo "Installing Mac apps"
 
 echo "Cleaning up brew"
 brew cleanup
