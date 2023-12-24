@@ -44,6 +44,7 @@ npm i -g next
 brew install gatsby-cli
 brew install netlify-cli
 brew install google-cloud-sdk
+brew install withgraphite/tap/graphite
 brew install mas
 
 
