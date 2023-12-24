@@ -18,6 +18,7 @@ The following are a checklist of tasks to be completed after every format:
 ### General Bootstrap
 
 1. Install [homebrew](https://brew.sh) with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
     - Run these two commands in your terminal to add Homebrew to your PATH:
 
     ```bash
@@ -59,7 +60,7 @@ Pick one of the following configurations
 
 ### Additional Tasks
 
-1. Open and configure Lulu
+1. Open and configure [Lulu](https://objective-see.org/products/lulu.html)
 2. Follow security steps listed [here](https://www.bejarano.io/hardening-macos/)
 3. Additional iCloud setup
 
@@ -74,7 +75,7 @@ Pick one of the following configurations
 5. Generate GitHub personal access token for commiting/pushing (update [yadm](https://yadm.io) if relevant)
 6. Remove all apps from dock except [VSCode](https://code.visualstudio.com/), iMessage and [Warp](https://www.warp.dev/), then adjust dock size
 7. Set Pixelsnap hotkey to `⌘ + Shift + X`  
-8. Open Obsidian, and disable from backing up to iCloud Drive (for local folder, place in a non-synced directory)
+8. Open Obsidian, and disable from backing up to iCloud Drive (for local folder, choose a non-synced directory)
 9. Load up a game of [Seterra](https://www.geoguessr.com/vgp/3007) and enjoy your new computer
 
 ## License
