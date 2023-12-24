@@ -21,6 +21,7 @@ The following are a checklist of tasks to be completed after every format:
 
     - Run these two commands in your terminal to add Homebrew to your PATH:
 
+
     ```bash
     (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jseanpatel/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -82,7 +83,7 @@ Pick one of the following configurations
 
 MIT License
 
-Copyright (c) 2023 Jacob Patel
+Copyright (c) 2024 Jacob Patel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
