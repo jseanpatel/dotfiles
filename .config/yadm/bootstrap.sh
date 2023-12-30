@@ -41,6 +41,7 @@ npm i -g dotenv-cli
 npm i -g yarn
 npm i -g eslint
 npm i -g next
+npm i -g vite
 brew install gatsby-cli
 brew install netlify-cli
 brew install google-cloud-sdk
