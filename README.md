@@ -17,16 +17,11 @@ The following are a checklist of tasks to be completed after every format:
 
 ### General Bootstrap
 
-1. Install [homebrew](https://brew.sh) with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-
-    - Run these two commands in your terminal to add Homebrew to your PATH:
-    <br/>
-    
+1. Install [homebrew](https://brew.sh) with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", ` then run these two commands to add Homebrew to the PATH
     ```bash
     (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jseanpatel/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
     ```
-
 2. Navigate to the home directory with `cd ~`
 3. Install [yadm](https://yadm.io) with `brew install yadm`
 4. Clone the dot files repository `yadm clone https://github.com/jseanpatel/dotfiles`
