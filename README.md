@@ -63,7 +63,7 @@ Pick one of the following configurations
     - Make Documents and Desktop folder read from iCloud with *System Settings > Apple ID > iCloud > Check Desktop & Documents Folders > Done*
     - Go to iMessages and enable messages in iCloud
 
-4. Log in to every application downloaded with `brew cask`. Then go and install these applicaitons manually:
+4. Log in to every application downloaded with `brew cask`. Then go and install these applications manually:
 
     - Install [Xnapper](https://xnapper.com/)
     - Install [Padlet](https://padlet.com/mac-app-download)
